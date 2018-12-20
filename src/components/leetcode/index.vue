@@ -1,11 +1,19 @@
 <template>
     <div id="leetcode">
+        <div>初级</div>
         <router-link to="/array">数组</router-link>
         <router-link to="/string">字符串</router-link>
         <router-link to="/tree">树</router-link>
         <router-link to="/sort">排序</router-link>
         <router-link to="/math">数学</router-link>
         <router-link to="/plan">动态规划</router-link>
+        <router-link to="/design">设计问题</router-link>
+        <router-link to="/other">其他</router-link>
+        <div>中级</div>
+        <router-link to="/array2">数组</router-link>
+        <div>其他</div>
+        <router-link to="/tencent">腾讯 2018 秋招精选（50 题）</router-link>
+        <router-link to="/more">更多</router-link>
         <router-view></router-view>
     </div>
 </template>

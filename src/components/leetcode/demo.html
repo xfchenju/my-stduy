@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <script>
+		function Solution(nums) {
+			this.nums = nums;
+			this.nums1 = JSON.parse(JSON.stringify(nums));;
+		}
+
+		Solution.prototype.shuffle = function(){
+			this.nums1.sort(function(a, b) {
+				return Math.random() > 0.5 ? -1 : 1;
+			});
+		    return this.nums1;
+		}
+
+		Solution.prototype.reset = function(){
+			return this.nums;
+		}
+
+		var nums = [1, 2, 3];
+		var solution = new Solution(nums);
+
+		console.log(solution.shuffle())
+		console.log(solution.reset())
+		console.log(solution.shuffle())
+		
+	</script> -->
+	<!-- <script>
+		var RecentCounter = function() {
+		    this.arr = [];
+		};
+
+		/** 
+		 * @param {number} t
+		 * @return {number}
+		 */
+		RecentCounter.prototype.ping = function(t) {
+			if(!t) {
+				return null;
+			}
+		    this.arr.push(t);
+		    let min = t - 3000 > 0 ? t - 3000 : 0;
+		    let max = t;
+		    let times = 0;
+		    for(let i = 0; i < this.arr.length; i++) {
+		        if((this.arr[i] >= min) && (this.arr[i] <= max)) {
+		            times++;
+		        }
+		    }
+		    return times;
+		};
+
+		var arr = [];
+		var Recent = new RecentCounter();
+		console.log(Recent.ping())
+		console.log(Recent.ping(1))
+		console.log(Recent.ping(100))
+		console.log(Recent.ping(3001))
+		console.log(Recent.ping(3002))
+	</script> -->
+	<script>
+		var islandPerimeter = function(grid) {
+		    let boxes = 0;
+		    let nearBoxes = 0;
+		    for(let i = 0; i < grid.length; i++) {
+		        for(let j = 0; j < grid[i].length; j++) {
+		            if(grid[i][j] == 1) {
+		                boxes++;
+		                if((grid[i][j - 1] && grid[i][j - 1] == 1)) {
+		                    nearBoxes++;
+		                } 
+		                if((grid[i][j + 1] && grid[i][j + 1] == 1)) {
+		                    nearBoxes++;
+		                } 
+		                if((grid[i + 1] && grid[i + 1][j] && grid[i + 1][j] == 1)) {
+		                    nearBoxes++;
+		                } 
+		                if((grid[i - 1] && grid[i - 1][j] && grid[i - 1][j] == 1)) {
+		                    nearBoxes++;
+		                } 
+		                console.log(nearBoxes, boxes, i, j, 'iii');
+		            }
+		        }
+		    }
+		    return 4 * boxes - nearBoxes; 
+		};
+
+		console.log(islandPerimeter([[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]), 'zhouchang');
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

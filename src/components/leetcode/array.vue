@@ -121,6 +121,26 @@
             </vue-markdown>
         </div>
         <hr/>
+        <h4>只出现一次的数字</h4>
+        <div>
+            <label>我的解答：</label>
+            <vue-markdown>
+            singleNumber(nums) {
+                for(var i = 0; i < nums.length; i++) {
+                    var tmp = 0;
+                    for(var j = nums.length -1; j >= 0; j--) {
+                        if(nums[i] == nums[j] && i != j) {
+                            tmp++;
+                        }
+                    }
+                    if(tmp == 0) {
+                        return nums[i];
+                    }
+                }
+            },
+            </vue-markdown>
+        </div>
+        <hr/>
         <h4>存在重复元素</h4>
         <div>
             <label>我的解答：</label>
